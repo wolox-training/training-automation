@@ -1,1 +1,1 @@
-# training-automation
+# training-cypress
