@@ -3,5 +3,6 @@ export default class Example {
 
   navigate(url) {
     cy.visit(url);
+    console.log('hola Yes');
   }
 }
