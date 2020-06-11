@@ -1,6 +1,8 @@
 {
   "projectId": "<Your project ID>",
+  "baseUrl": "http://automationpractice.com",
   "env": {
     "example": "1235"
-  }
+  },
+  "chromeWebSecurity": false
 }

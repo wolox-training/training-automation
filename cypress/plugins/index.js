@@ -12,6 +12,7 @@
 // the project's config changing)
 
 require('@applitools/eyes.cypress')(module);
+
 module.exports = (on, config) => {
   // bind to the event we care about
   on('<event>', (arg1, arg2) => {
