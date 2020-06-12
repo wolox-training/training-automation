@@ -1,6 +1,9 @@
 {
-  "projectId": "<Your project ID>",
-  "env": {
-    "example": "1235"
+  "baseUrl" :"http://automationpractice.com/index.php",
+  "chromeWebSecurity": false,
+  "env" :{
+    "searchOne" : "printed dress",
+    "WriteAReview" :"Printed Summer Dress"
   }
+  
 }
