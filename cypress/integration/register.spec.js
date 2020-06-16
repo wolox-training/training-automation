@@ -5,7 +5,6 @@ describe('Register a new user',()=>{
     cy.get('[class=login]').click()
   })
   
-  
     it('Email validation incorrect', ()=>{
      cy.get('@userData').then((userData) =>{
      cy.get('#email_create').type(userData.email)
@@ -27,16 +26,11 @@ describe('Register a new user',()=>{
     cy.get('#passwd').type(userData.Password)
 
     const randomDays = Math.floor((Math.random() * 31) + 1);
-         cy.wait(3000)
-         cy.get('#days').eq(randomDays).click()
+    cy.wait(3000)
+    cy.get('#days').eq(randomDays).click()
 
     const randomMonths = Math.floor((Math.random() * 12) + 1);
-         cy.get('#months').eq(randomMonths).click()
+    cy.get('#months').eq(randomMonths).click()
    })
   })
-
- 
-
-
-
 })
