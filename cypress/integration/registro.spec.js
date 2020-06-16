@@ -1,18 +1,15 @@
 import { VAR, URL } from '../const/constants';
 import { IDs } from '../page-objects/registro';
-// / <reference types="cypress" />
+import {HAVETEXT} from '../const/helpers';
 
 context('Register', () => {
   beforeEach(() => {
     cy.visit(URL.index);
     cy.get(`.${IDs.idSingIn}`).click();
-
-    // Cypress.Cookies.defaults({
-    //   whitelist: "session_id"
-    // });
   });
 
   it('Sign in', () => {
+    
     cy.get(`#${IDs.emailCreate}`)
       .type(VAR.textSmall)
       .should('have.value', VAR.textSmall)
@@ -35,22 +32,19 @@ context('Register', () => {
 
     cy.get(`#${IDs.SubmitCreate}`).click();
 
-    cy.get(`#${IDs.customerFirstName}`).type(VAR.textSmall).should('have.value', VAR.textSmall);
+    HAVETEXT(IDs.customerFirstNamee,VAR.textSmall);
 
     cy.get('#id_state').select('Alabama');
 
     cy.get(`#${IDs.mrs}`).check();
 
-    cy.get(`#${IDs.customerLastName}`).type(VAR.textSmall).should('have.value', VAR.textSmall);
+    HAVETEXT(IDs.customerLastName,VAR.textSmall);
+    HAVETEXT(IDs.password,VAR.textSmall);
+    HAVETEXT(IDs.address,VAR.textSmall);
+    HAVETEXT(IDs.city,VAR.textSmall);
 
-    cy.get(`#${IDs.password}`).type(VAR.textSmall).should('have.value', VAR.textSmall);
-
-    cy.get(`#${IDs.address}`).type(VAR.textSmall).should('have.value', VAR.textSmall);
-
-    cy.get(`#${IDs.city}`).type(VAR.textSmall).should('have.value', VAR.textSmall);
-
-    // cy.get("[name=company]").type("Wolox");
+    cy.get("[name=company]").type("Wolox");
     cy.wait(10000);
-    // cy.get(".page-subheading").contains("Your personal information");
+    cy.get(".page-subheading").contains("Your personal information");
   });
 });
