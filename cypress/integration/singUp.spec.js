@@ -9,7 +9,7 @@ describe('Sing Up',()=>{
       cy.get('.form-control').eq(0).type(userData.username)
       cy.get('.form-control').eq(1).type(userData.email_i)
      cy.get('.btn').should('be.disabled')
-     cy.get('input[type=password]').type(userData.password)
+     cy.get('input[type=password]').type(userData.password1)
      cy.get('button[type=submit]').click()
      cy.contains(' email is invalid ').should('be.visible')
 
@@ -19,7 +19,7 @@ describe('Sing Up',()=>{
   it('With out Username', ()=>{
     cy.get('@userData').then((userData) =>{
       cy.get('.form-control').eq(1).type(userData.email_two)
-      cy.get('input[type=password]').type(userData.password)
+      cy.get('input[type=password]').type(userData.password1)
       cy.get('button[type=submit]').click({force: true})
       expect(Cypress.env('MessageOne')).to.exist
     })
