@@ -1,9 +1,10 @@
 {
   "baseUrl" :"http://automationpractice.com/index.php",
-  "chromeWebSecurity": false,
-  "env" :{
-    "searchOne" : "printed dress",
-    "WriteAReview" :"Printed Summer Dress"
-  }
   
+  "env" :{
+    "MessageOne" : " username can't be blank,is too short (minimum is 1 character) ",
+    "MessagePwd" : " password is too short (minimum is 8 characters) ",
+    "MessageUser": " email has already been taken ",
+    "Page":"https://angular.realworld.io/"
+  } 
 }
