@@ -1,11 +1,11 @@
-describe('Sing Up',()=>{
-  beforeEach(()=>{
+describe('Sing Up', () => {
+  beforeEach( () => {
    cy.fixture('user.json').as('userData')
    cy.visit('baseUrl')
    cy.get('.nav-link').eq(2).click()
   })
-  it('Format email incorrect', ()=>{
-    cy.get('@userData').then((userData) =>{
+  it('Format email incorrect', () => {
+    cy.get('@userData').then((userData) => {
      cy.get('.form-control').eq(0).type(userData.username)
      cy.get('.form-control').eq(1).type(userData.email_i)
      cy.get('.btn').should('be.disabled')
@@ -15,8 +15,8 @@ describe('Sing Up',()=>{
     })
   })
 
-  it('With out Username', ()=>{
-    cy.get('@userData').then((userData) =>{
+  it('With out Username', () => {
+    cy.get('@userData').then((userData) => { 
       cy.get('.form-control').eq(1).type(userData.email_two)
       cy.get('input[type=password]').type(userData.password1)
       cy.wait(3000)
@@ -25,8 +25,8 @@ describe('Sing Up',()=>{
     })
   })
 
-  it('With one character in Password', ()=>{
-    cy.get('@userData').then((userData) =>{
+  it('With one character in Password', () => {
+    cy.get('@userData').then((userData) => {
       cy.get('.form-control').eq(0).type(userData.username)
       cy.get('.form-control').eq(1).type(userData.email_two)
       cy.get('.btn').should('be.disabled')
@@ -37,8 +37,8 @@ describe('Sing Up',()=>{
     })
   })
 
-  it('Register an user correctly', ()=>{
-    cy.get('@userData').then((userData) =>{
+  it('Register an user correctly', () => {
+    cy.get('@userData').then((userData) => {
       cy.get('.form-control').eq(0).type(userData.username)
       cy.get('.form-control').eq(1).type(userData.email_one)
       cy.get('.btn').should('be.disabled')
@@ -48,8 +48,8 @@ describe('Sing Up',()=>{
     })
   })
 
-  it('Register an existing username and email', ()=>{
-    cy.get('@userData').then((userData) =>{
+  it('Register an existing username and email', () => {
+    cy.get('@userData').then((userData) => {
       cy.get('.form-control').eq(0).type(userData.username)
       cy.get('.form-control').eq(1).type(userData.email_one)
       cy.get('.btn').should('be.disabled')
