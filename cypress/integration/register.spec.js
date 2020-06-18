@@ -1,7 +1,7 @@
 describe('Register a new user',()=>{
   beforeEach(()=>{
     cy.fixture('user.json').as('userData')
-    cy.visit("baseUrl")
+    cy.visit(Cypress.env('Page'))
     cy.get('[class=login]').click()
   })
   
