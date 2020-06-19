@@ -1,8 +1,5 @@
 {
   "projectId": "<Your project ID>",
-  "baseUrl": "http://automationpractice.com",
-  "env": {
-    "example": "1235"
-  },
+  "baseUrl": "https://angular.realworld.io/",
   "chromeWebSecurity": false
 }
