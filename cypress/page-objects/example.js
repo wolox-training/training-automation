@@ -1,7 +1,7 @@
 export default class Example {
   // constructor() {}
 
-  navigate(url) {
+   navigate(url) {
     cy.visit("baseUrl")
   }
 }

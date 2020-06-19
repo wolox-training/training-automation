@@ -1,15 +1,32 @@
 {
-  "email" : "testone@@.co",
-  "emailone" : "trainingcypress@wolox.com.co",
-  "First_name" : "Sandra",
-  "Last_name" : "Marin",
-  "Email" : "sandraprueba@gmail.com",
-  "Password" : "Wolox1189",
-  "email_one" : "marcela.soto@wolox.co",
-  "password1" : "wolox1189",
-  "email_two" : "conduit1189@wolox.co",
-  "email_i" : "kkkkkk",
-  "username" : "Chela",
-  "pwd" : "123"
+   "register" : {
+     "email" : "testone@@.co",
+     "emailone" : "trainingcypress@wolox.com.co",
+     "First_name" : "Sandra",
+     "Last_name" : "Marin",
+     "Email" : "sandraprueba@gmail.com"
+    },
+  
+   "formatEmailIncorrect" : {
+     "username" : "Chela",
+     "email" : "kkkkkk",
+     "password" : "wolox1189"
+    },
+   
+    "withOutUsername" : {
+      "email" : "conduit1189@wolox.co",
+      "password" : "wolox1189"
+    },
+    "withOneCharacterInPassword" : {
+      "username" : "Chela",
+      "email" : "conduit1189@wolox.co",
+      "pwd" : "123"
+    },
+    "registerAnUserCorrectly" : {
+      "username" : "Chela",
+      "email" : "marcela.soto@wolox.co",
+      "password" : "Wolox1189"
+    }
 
+   
 }

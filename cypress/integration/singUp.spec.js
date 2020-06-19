@@ -1,15 +1,15 @@
 describe('Sing Up', () => {
   beforeEach( () => {
    cy.fixture('user.json').as('userData')
-   cy.visit('baseUrl')
+   cy.visit(Cypress.env('baseUrl'))
    cy.get('.nav-link').eq(2).click()
   })
   it('Format email incorrect', () => {
     cy.get('@userData').then((userData) => {
-     cy.get('.form-control').eq(0).type(userData.username)
-     cy.get('.form-control').eq(1).type(userData.email_i)
+     cy.get('.form-control').eq(0).type(userData.formatEmailIncorrect.username)
+     cy.get('.form-control').eq(1).type(userData.formatEmailIncorrect.email)
      cy.get('.btn').should('be.disabled')
-     cy.get('input[type=password]').type(userData.password1)
+     cy.get('input[type=password]').type(userData.formatEmailIncorrect.password)
      cy.get('button[type=submit]').click()
      cy.contains(' email is invalid ').should('be.visible')
     })
@@ -17,8 +17,8 @@ describe('Sing Up', () => {
 
   it('With out Username', () => {
     cy.get('@userData').then((userData) => { 
-      cy.get('.form-control').eq(1).type(userData.email_two)
-      cy.get('input[type=password]').type(userData.password1)
+      cy.get('.form-control').eq(1).type(userData.withOutUsername.email)
+      cy.get('input[type=password]').type(userData.withOutUsername.password)
       cy.wait(3000)
       cy.get('button[type=submit]').click()
       expect(Cypress.env('MessageOne')).to.exist
@@ -27,10 +27,10 @@ describe('Sing Up', () => {
 
   it('With one character in Password', () => {
     cy.get('@userData').then((userData) => {
-      cy.get('.form-control').eq(0).type(userData.username)
-      cy.get('.form-control').eq(1).type(userData.email_two)
+      cy.get('.form-control').eq(0).type(userData.withOneCharacterInPassword.username)
+      cy.get('.form-control').eq(1).type(userData.withOneCharacterInPassword.email)
       cy.get('.btn').should('be.disabled')
-      cy.get('input[type=password]').type(userData.pwd)
+      cy.get('input[type=password]').type(userData.withOneCharacterInPassword.pwd)
       cy.wait(3000)
       cy.get('button[type=submit]').click()
       expect(Cypress.env('MessagePwd')).to.exist
@@ -39,10 +39,10 @@ describe('Sing Up', () => {
 
   it('Register an user correctly', () => {
     cy.get('@userData').then((userData) => {
-      cy.get('.form-control').eq(0).type(userData.username)
-      cy.get('.form-control').eq(1).type(userData.email_one)
+      cy.get('.form-control').eq(0).type(userData.registerAnUserCorrectly.username)
+      cy.get('.form-control').eq(1).type(userData.registerAnUserCorrectly.email_one)
       cy.get('.btn').should('be.disabled')
-      cy.get('input[type=password]').type(userData.Password)
+      cy.get('input[type=password]').type(userData.registerAnUserCorrectly.password)
       cy.wait(3000)
       cy.get('button[type=submit]').click()
     })
@@ -50,10 +50,10 @@ describe('Sing Up', () => {
 
   it('Register an existing username and email', () => {
     cy.get('@userData').then((userData) => {
-      cy.get('.form-control').eq(0).type(userData.username)
-      cy.get('.form-control').eq(1).type(userData.email_one)
+      cy.get('.form-control').eq(0).type(userData.registerAnUserCorrectly.username)
+      cy.get('.form-control').eq(1).type(userData.registerAnUserCorrectly.email)
       cy.get('.btn').should('be.disabled')
-      cy.get('input[type=password]').type(userData.Password)
+      cy.get('input[type=password]').type(userData.registerAnUserCorrectly.password)
       cy.wait(3000)
       cy.get('button[type=submit]').click()
       expect(Cypress.env('MessageUser')).to.exist
