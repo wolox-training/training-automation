@@ -11,7 +11,7 @@ describe('Sing Up', () => {
      cy.get('.btn').should('be.disabled')
      cy.get('input[type=password]').type(userData.formatEmailIncorrect.password)
      cy.get('button[type=submit]').click()
-     cy.contains(' email is invalid ').should('be.visible')
+     cy.contains(Cypress.env('messageUserIncorrect')).should('be.visible')
     })
   })
 
@@ -21,7 +21,7 @@ describe('Sing Up', () => {
       cy.get('input[type=password]').type(userData.withOutUsername.password)
       cy.wait(3000)
       cy.get('button[type=submit]').click()
-      expect(Cypress.env('MessageOne')).to.exist
+      expect(Cypress.env('messageOne')).to.exist
     })
   })
 
@@ -33,7 +33,7 @@ describe('Sing Up', () => {
       cy.get('input[type=password]').type(userData.withOneCharacterInPassword.pwd)
       cy.wait(3000)
       cy.get('button[type=submit]').click()
-      expect(Cypress.env('MessagePwd')).to.exist
+      expect(Cypress.env('messagePwd')).to.exist
     })
   })
 
@@ -56,7 +56,7 @@ describe('Sing Up', () => {
       cy.get('input[type=password]').type(userData.registerAnUserCorrectly.password)
       cy.wait(3000)
       cy.get('button[type=submit]').click()
-      expect(Cypress.env('MessageUser')).to.exist
+      expect(Cypress.env('messageUser')).to.exist
     })
   })
 

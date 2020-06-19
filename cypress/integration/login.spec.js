@@ -1,7 +1,7 @@
 describe('Login Validation',()=>{
   beforeEach(()=>{
     cy.fixture('user.json').as('userData')
-    cy.visit(Cypress.env('Page'))
+    cy.visit(Cypress.env('page'))
     cy.get('[class=login]').click()
 })
 it('click in Sing In', ()=>{

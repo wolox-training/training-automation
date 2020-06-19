@@ -1,9 +1,10 @@
 {
   "env" :{
-    "MessageOne" : " username can't be blank,is too short (minimum is 1 character) ",
-    "MessagePwd" : " password is too short (minimum is 8 characters) ",
-    "MessageUser": " email has already been taken ",
-    "Page" :"http://automationpractice.com/index.php",
+    "messageOne" : " username can't be blank,is too short (minimum is 1 character) ",
+    "messagePwd" : " password is too short (minimum is 8 characters) ",
+    "messageUser": " email has already been taken ",
+    "messageUserIncorrect" : " email is invalid ",
+    "page" :"http://automationpractice.com/index.php",
     "baseUrl" : "https://angular.realworld.io/"
 
   } 
