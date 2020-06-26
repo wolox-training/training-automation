@@ -10,7 +10,7 @@ context('Register', () => {
 
   it('Sign up validate null', () => { 
     cy.get(IDs.btnSingUp).should('not.have.class', 'disabled');
- 
+
    });
 
   it('Sign up data incorrect', () => { 
@@ -22,19 +22,15 @@ context('Register', () => {
     cy.get(`.${IDs.errorRegister}`).contains(VAR.emailInvalid);
     cy.get(`.${IDs.errorRegister}`).contains(VAR.passInvalid);
     cy.get(`.${IDs.errorRegister}`).contains(VAR.userInvalid);
-
   });
 
   it('Sign up', () => { 
-    
    HAVETEXT(IDs.name,VAR.name);
    HAVETEXT(IDs.email,VAR.email);
-   HAVETEXT(IDs.password,VAR.pass);
+   HAVETEXT(IDs.password,VAR.password);
 
    cy.get(IDs.btnSingUp).click();
-
    cy.get(IDs.nameProfile).should('be.visible');
-
   });
 
  });
