@@ -8,7 +8,10 @@ export const VAR = {
   nulo:' ',
   emailInvalid: 'email is invalid',
   passInvalid:'password is too short (minimum is 8 characters)',
-  userInvalid:"username can't be blank"
+  userInvalid:"username can't be blank",
+  emailRegister: 'correoPrueba@correo.co',
+  passRegister: '1234567890',
+  error: 'email or password is invalid'
 };
 export const URL = {
   index: ''
