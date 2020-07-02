@@ -28,7 +28,7 @@ context('Register', () => {
    HAVETEXT(IDs.password,VAR.passRegister);
 
    cy.get(IDs.btnSingIn).click();
-  // cy.get(IDs.nameProfile).should('be.visible');
+   cy.get(IDs.nameProfile).should('be.visible');
   });
 
  });

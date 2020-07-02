@@ -6,5 +6,7 @@ export const IDs = {
   email: 'input[formcontrolname*="email"]',
   password: 'input[formcontrolname*="password"]',
   btnSingIn: 'button[type*="submit"]',
-  errorRegister: 'error-messages'
+  errorRegister: 'error-messages',
+  nameProfile: 'a[href*="/profile/prueba%20name"]',
+
 };
