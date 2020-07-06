@@ -7,9 +7,19 @@ export const VAR = {
   password: 'a1b2c3d4e5',
   nulo:' ',
   emailInvalid: 'email is invalid',
-  passInvalid:'password is too short (minimum is 8 characters)',
-  userInvalid:"username can't be blank"
+  passInvalid: 'password is too short (minimum is 8 characters)',
+  userInvalid: "username can't be blank",
+  emailRegister: 'correoprueba2@correo.co',
+  passRegister: '1234567890',
+  error: 'email or password is invalid',
+  articuleTitleInvlid: "title can't be blank,is too short (minimum is 1 character)",
+  articuleBodyInvalid: "body can't be blank",
+  articuleDescripInvalid: "description can't be blank,is too short (minimum is 1 character)",
+  title: "Titulo",
+  descripcion: "textotextotextotextotextotexto ",
+  body: "bodybodybodybodybodybodybodybodybody "
 };
+
 export const URL = {
   index: ''
 };
