@@ -17,7 +17,7 @@ context('Register', () => {
     haveText(SELECTORS.password, VAR.textSmall);
 
     cy.get(SELECTORS.btnSignIn).click();
-    cy.get(SELECTORS.errorRegister).contains(VAR.error);
+    cy.get(SELECTORS.registerError).contains(VAR.error);
   });
 
   it('Sign in', () => { 

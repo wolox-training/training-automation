@@ -7,6 +7,6 @@ export const SELECTORS = {
   email: 'input[formcontrolname*="email"]',
   password: 'input[formcontrolname*="password"]',
   btnSingUp: 'button[type*="submit"]',
-  nameProfile: `a[href*="/profile/${VAR.name}"]`,
-  errorRegister: '.error-messages'
+  profileName: `a[href*="/profile/${VAR.name}"]`,
+  registerError: '.error-messages'
 };

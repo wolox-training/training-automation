@@ -3,6 +3,6 @@ export const SELECTORS = {
   email: 'input[formcontrolname*="email"]',
   password: 'input[formcontrolname*="password"]',
   btnSignIn: 'button[type*="submit"]',
-  errorRegister: '.error-messages',
-  nameProfile: 'a[href*="/profile/prueba%20name"]'
+  registerError: '.error-messages',
+  profileName: 'a[href*="/profile/prueba%20name"]'
 };

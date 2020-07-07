@@ -18,9 +18,9 @@ context('Register', () => {
     haveText(SELECTORS.password, VAR.textSmall);
     cy.get(SELECTORS.btnSingUp).click();
 
-    cy.get(SELECTORS.errorRegister).contains(VAR.emailInvalid);
-    cy.get(SELECTORS.errorRegister).contains(VAR.passInvalid);
-    cy.get(SELECTORS.errorRegister).contains(VAR.userInvalid);
+    cy.get(SELECTORS.registerError).contains(VAR.emailInvalid);
+    cy.get(SELECTORS.registerError).contains(VAR.passInvalid);
+    cy.get(SELECTORS.registerError).contains(VAR.userInvalid);
   });
 
   it('Sign up', () => { 
@@ -29,6 +29,6 @@ context('Register', () => {
     haveText(SELECTORS.password, VAR.password);
 
     cy.get(SELECTORS.btnSingUp).click();
-    cy.get(SELECTORS.nameProfile).should('be.visible');
+    cy.get(SELECTORS.profileName).should('be.visible');
   });
  });
