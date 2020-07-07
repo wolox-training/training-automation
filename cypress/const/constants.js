@@ -1,5 +1,3 @@
-import{ RANDOM } from '../const/helpers';
-
 export const VAR = {
   email: `correo${Math.floor(Math.random() * 100) + 1}@email.co`,
   name: `name${Math.floor(Math.random() * 100) + 1}`,

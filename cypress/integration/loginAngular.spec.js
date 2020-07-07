@@ -1,29 +1,26 @@
 import { VAR, URL } from '../const/constants';
-import { IDs } from '../page-objects/loginAngular';
-import{ HAVETEXT, LOGIN } from '../const/helpers';
+import { SELECTORS } from '../page-objects/loginAngular';
+import{ haveText, login } from '../const/helpers';
 
 context('Register', () => {
   beforeEach(() => {
     cy.visit(URL.index);
-    cy.get(IDs.idSingIn).click();
+    cy.get(SELECTORS.idSignIn).click();
   });
 
   it('Sign up validate null', () => { 
-    cy.get(IDs.btnSingIn).should('not.have.class', 'disabled');
-
+    cy.get(SELECTORS.btnSignIn).should('not.have.class', 'disabled');
    });
 
   it('Sign up data incorrect', () => { 
-    
-    haveText(IDs.email, VAR.textSmall);
-    haveText(IDs.password, VAR.textSmall);
-    cy.get(IDs.btnSingIn).click();
-    cy.get(`.${IDs.errorRegister}`).contains(VAR.error);
-   
+    haveText(SELECTORS.email, VAR.textSmall);
+    haveText(SELECTORS.password, VAR.textSmall);
+
+    cy.get(SELECTORS.btnSignIn).click();
+    cy.get(SELECTORS.errorRegister).contains(VAR.error);
   });
 
   it('Sign in', () => { 
-    LOGIN();
+    login();
   });
-
  });

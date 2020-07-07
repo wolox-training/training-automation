@@ -5,11 +5,7 @@ export function haveText (elemnt, text) {
   cy.get(elemnt).type(text).should('have.value', text);
 }
 
-export function RANDOM (){
-  Math.floor(Math.random() * 100) + 1;
-}
-
-export function LOGIN (){
+export function login (){
   cy.get(IDs.idSingIn).click();
 
   haveText(IDs.email, VAR.emailRegister);
