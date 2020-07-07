@@ -14,9 +14,9 @@ context('Register', () => {
    });
 
   it('Sign up data incorrect', () => { 
-    HAVETEXT(IDs.name, VAR.nulo);
-    HAVETEXT(IDs.email, VAR.textSmall);
-    HAVETEXT(IDs.password, VAR.textSmall);
+    haveText(IDs.name, VAR.nulo);
+    haveText(IDs.email, VAR.textSmall);
+    haveText(IDs.password, VAR.textSmall);
     cy.get(IDs.btnSingUp).click();
 
     cy.get(`.${IDs.errorRegister}`).contains(VAR.emailInvalid);
@@ -25,12 +25,12 @@ context('Register', () => {
   });
 
   it('Sign up', () => { 
-   HAVETEXT(IDs.name, VAR.name);
-   HAVETEXT(IDs.email, VAR.email);
-   HAVETEXT(IDs.password, VAR.password);
+    haveText(IDs.name, VAR.name);
+    haveText(IDs.email, VAR.email);
+    haveText(IDs.password, VAR.password);
 
-   cy.get(IDs.btnSingUp).click();
-   cy.get(IDs.nameProfile).should('be.visible');
+    cy.get(IDs.btnSingUp).click();
+    cy.get(IDs.nameProfile).should('be.visible');
   });
 
  });
