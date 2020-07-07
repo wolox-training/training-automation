@@ -1,11 +1,11 @@
 import { VAR, URL } from '../const/constants';
 import { IDs } from '../page-objects/newArticule';
-import{ HAVETEXT, LOGIN } from '../const/helpers';
+import{ haveText, LOGIN } from '../const/helpers';
 
 context('New articule', () => {
   beforeEach(() => {
     cy.visit(URL.index);
-    LOGIN ();
+    LOGIN();
     cy.get(IDs.newArticule).click();
   });
 
@@ -19,9 +19,9 @@ context('New articule', () => {
 
     it('Public new articule', () => { 
 
-      HAVETEXT(IDs.title,VAR.title);
-      HAVETEXT(IDs.descripcion,VAR.descripcion);
-      HAVETEXT(IDs.body,VAR.body)
+      haveText(IDs.title, VAR.title);
+      haveText(IDs.descripcion, VAR.descripcion);
+      haveText(IDs.body, VAR.body)
 
       cy.get(IDs.btnPublish).contains('Publish Article').click();
       cy.wait(500);

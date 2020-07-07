@@ -15,9 +15,9 @@ export const VAR = {
   articuleTitleInvlid: "title can't be blank,is too short (minimum is 1 character)",
   articuleBodyInvalid: "body can't be blank",
   articuleDescripInvalid: "description can't be blank,is too short (minimum is 1 character)",
-  title: "Titulo",
-  descripcion: "textotextotextotextotextotexto ",
-  body: "bodybodybodybodybodybodybodybodybody "
+  title: 'Titulo',
+  descripcion: 'textotextotextotextotextotexto ',
+  body: 'bodybodybodybodybodybodybodybodybody '
 };
 
 export const URL = {

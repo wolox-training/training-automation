@@ -1,7 +1,7 @@
 import { VAR } from '../const/constants';
 import { IDs } from '../page-objects/loginAngular';
 
-export function HAVETEXT (elemnt, text) {
+export function haveText (elemnt, text) {
   cy.get(elemnt).type(text).should('have.value', text);
 }
 
@@ -12,8 +12,8 @@ export function RANDOM (){
 export function LOGIN (){
   cy.get(IDs.idSingIn).click();
 
-  HAVETEXT(IDs.email,VAR.emailRegister);
-  HAVETEXT(IDs.password,VAR.passRegister);
+  haveText(IDs.email, VAR.emailRegister);
+  haveText(IDs.password, VAR.passRegister);
 
   cy.get(IDs.btnSingIn).click();
   cy.get(IDs.nameProfile).should('be.visible');

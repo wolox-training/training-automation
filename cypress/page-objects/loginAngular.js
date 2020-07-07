@@ -5,6 +5,5 @@ export const IDs = {
   password: 'input[formcontrolname*="password"]',
   btnSingIn: 'button[type*="submit"]',
   errorRegister: 'error-messages',
-  nameProfile: 'a[href*="/profile/prueba%20name"]',
-
+  nameProfile: 'a[href*="/profile/prueba%20name"]'
 };

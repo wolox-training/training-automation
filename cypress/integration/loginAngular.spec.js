@@ -15,10 +15,9 @@ context('Register', () => {
 
   it('Sign up data incorrect', () => { 
     
-    HAVETEXT(IDs.email,VAR.textSmall);
-    HAVETEXT(IDs.password,VAR.textSmall);
+    haveText(IDs.email, VAR.textSmall);
+    haveText(IDs.password, VAR.textSmall);
     cy.get(IDs.btnSingIn).click();
-
     cy.get(`.${IDs.errorRegister}`).contains(VAR.error);
    
   });
